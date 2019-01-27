@@ -26,7 +26,7 @@ function getFlight(event) {
     if (event.keyCode != 13) {
         return;
     }
-    debugger;
+    //debugger;
     var origin = document.getElementById("origin_input").value;
     var origin_airport = name_to_airport[origin];
     var best_dest;
@@ -38,15 +38,21 @@ function getFlight(event) {
                 return response.json();
             })
             .then(function (response) {
-                debugger;
-                if (newResponse.cost < best_price){
-                    best_price = newResponse.cost;
-                    best_dest = airport_to_name[newResponse.destinationCode];
+                //debugger;
+                // sort search results
+                var cheap_flight = response.sort(function(a, b){ 
+                    return a.cost-b.cost;
+                })
+                //console.log(cheap_flight[0]['cost']);
+                if (cheap_flight[0]['cost'] < best_price){
+                    best_price = cheap_flight[0]['cost'];
+                    best_dest = airport_to_name[cheap_flight[0]['destinationCode']];
                     console.log(best_dest);
                 }
-
+                document.getElementById("city").innerHTML = best_dest;
+                document.getElementById("price").innerHTML = "$" + best_price;
             }).catch(function(error){
-                console.log("no flights found");
+                //console.log("no flights found");
             })
     })
 
