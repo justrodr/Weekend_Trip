@@ -1,0 +1,106 @@
+@font-face {
+    font-family: "lovelo_bold";
+    src:url("./Lovelo_Line_Bold.ttf");
+}
+
+@font-face {
+    font-family: "lovelo_light";
+    src:url("./Lovelo_Line_Light.ttf");
+}
+
+@font-face {
+    font-family: "lovelo_black";
+    src:url("./Lovelo-Black.ttf");
+}
+
+
+body {
+    background: #FF5650;
+}
+
+
+.title {
+    color: white;
+    margin: auto;
+    width: 80%;
+}
+
+.title #main{
+    font-family: lovelo_bold;
+    text-align: center;
+    font-size: 60pt;
+
+}
+
+.title #company{
+    font-family: lovelo_light;
+    margin-top: -55pt;
+    transform: translateX(100px);
+    text-align: center; 
+    font-size: 20pt;
+}
+
+.flight{
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border-style: double;
+    border-color: white;
+    border-radius: 25px;
+    font-family: lovelo_black;
+    color: white;
+}
+
+.destination {
+    font-size: 40pt;
+    text-align: center;
+    margin-top: -30px;
+    margin-bottom: -10px;
+}
+
+.origin {
+    font-size: 18pt;
+    text-align: center;
+    margin-top: -20px;
+    background: none;
+    border: white;
+    width: 250px;
+    border-style: solid;
+    border-radius: 10px;
+    font-family: lovelo_black;
+    color: white;
+    transform: translateX(74px);
+}
+
+
+
+.flight h4{
+    font-size: 12pt;
+    text-align: center;
+    transform: translateX(-150px);
+}
+
+#book_flight{
+    margin-top: 20px;
+    width: 150px;
+    height: 60px;
+    background: none;
+    border-radius: 15px;
+    border-color: white;
+    border-style: solid;
+    color: white;
+    font-family: lovelo_black;
+    font-size: 12pt;
+    transition-duration: 0.4s;
+    opacity: 1;
+    position: absolute;
+    transform: translateX(128px);
+
+}
+
+#book_flight:hover{
+    opacity: 0.65;
+}
+
+
+
